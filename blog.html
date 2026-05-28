@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블로그 - 마포 셔츠룸 | 서버 웜업의 정수</title>
+    <meta name="description" content="진짜 서버 웜업이란 무엇인가? 마포 셔츠룸이 던지는 거침없는 질문. 스트리트 브루탈리즘의 시각으로 본 업계의 민낯. 010-6279-0862.">
+    <meta name="keywords" content="마포 셔츠룸, 서버 웜업, 블로그, 진짜 웜업, 스트리트 브루탈리즘, 010-6279-0862, sf-t3-1779642675702-124">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <link rel="canonical" href="https://sf-t3-1779642675702-124.pages.dev/blog">
+    <!-- OG / Twitter -->
+    <meta property="og:title" content="블로그 - 마포 셔츠룸 | 서버 웜업의 정수">
+    <meta property="og:description" content="진짜를 원한다면, 이 글을 읽어라. 마포 셔츠룸의 철학. 010-6279-0862.">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.6; }
+
+        /* ===== STREET BRUTALIST CORE ===== */
+        h1, h2, h3, h4 { font-weight: 900; text-transform: uppercase; letter-spacing: -0.02em; color: #f5f5f5; }
+        h1 { font-size: 3.5rem; line-height: 0.95; margin-bottom: 1rem; text-shadow: 4px 4px 0 #ff0066; }
+        h2 { font-size: 2.8rem; margin-bottom: 1.5rem; border-left: 8px solid #ff0066; padding-left: 1rem; }
+        h3 { font-size: 1.8rem; margin-bottom: 1rem; background: #1a1a1a; display: inline-block; padding: 0.2rem 1rem; }
+        p, li, blockquote { font-size: 1.125rem; margin-bottom: 1rem; color: #c0c0c0; }
+        a { color: #ff0066; text-decoration: none; border-bottom: 2px solid transparent; transition: border 0.2s; }
+        a:hover { border-bottom-color: #ff0066; }
+
+        /* ===== LAYOUT: full bleed + asymmetric ===== */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .full-bleed { width: 100vw; margin-left: calc(-50vw + 50%); }
+
+        /* ===== NAV ===== */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2rem; background: #111; border-bottom: 3px solid #ff0066; position: sticky; top: 0; z-index: 100; }
+        nav .logo { font-size: 1.8rem; font-weight: 900; color: #f5f5f5; text-transform: uppercase; }
+        nav .logo a { color: inherit; border-bottom: none; }
+        nav ul { list-style: none; display: flex; gap: 2rem; align-items: center; }
+        nav ul li a { font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #ccc; border-bottom: 2px solid transparent; }
+        nav ul li a:hover { color: #ff0066; }
+        nav .hamburger { display: none; font-size: 2rem; background: none; border: none; color: #fff; cursor: pointer; }
+        nav .tel-link { background: #ff0066; color: #000 !important; padding: 0.5rem 1.2rem; border-radius: 0; font-weight: 900; border: 2px solid #ff0066; transition: 0.2s; }
+        nav .tel-link:hover { background: #000; color: #ff0066 !important; border-color: #ff0066; }
+
+        /* ===== HERO (blog header) ===== */
+        .hero { padding: 4rem 2rem; background: #0a0a0a; border-bottom: 4px solid #ff0066; }
+        .hero h1 { font-size: 4rem; line-height: 0.9; }
+        .hero .meta { font-size: 0.9rem; color: #888; margin-top: 1rem; text-transform: uppercase; letter-spacing: 0.1em; border-left: 4px solid #ff0066; padding-left: 1rem; }
+
+        /* ===== ARTICLE ===== */
+        article { padding: 4rem 2rem; }
+        article .content { max-width: 800px; margin: 0 auto; }
+        article blockquote { border-left: 6px solid #ff0066; padding: 1rem 2rem; margin: 2rem 0; background: #151515; font-style: italic; color: #e0e0e0; }
+        article blockquote::before { content: "“"; font-size: 3rem; color: #ff0066; line-height: 0; vertical-align: -0.4em; }
+        article .highlight-box { background: #1a1a1a; border: 2px solid #ff0066; padding: 2rem; margin: 2rem 0; }
+        article .highlight-box p:last-child { margin-bottom: 0; }
+
+        /* ===== FOOTER ===== */
+        footer { padding: 3rem 2rem; background: #0d0d0d; border-top: 3px solid #ff0066; text-align: center; }
+        footer p { font-size: 0.9rem; color: #666; margin-bottom: 0.5rem; }
+        footer .tel-link { display: inline-block; margin-top: 1rem; font-size: 1.5rem; font-weight: 900; color: #ff0066; border: 3px solid #ff0066; padding: 0.5rem 2rem; background: #000; }
+        footer .tel-link:hover { background: #ff0066; color: #000; }
+
+        /* ===== RESPONSIVE 768 ===== */
+        @media screen and (max-width: 768px) {
+            .container { padding: 0 1rem; }
+            nav ul { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background: #111; padding: 1rem; border-bottom: 3px solid #ff0066; }
+            nav ul.active { display: flex; }
+            nav .hamburger { display: block; }
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            .hero h1 { font-size: 2.5rem; }
+            article .content { padding: 0 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+    <div class="logo"><a href="/">마포 셔츠룸</a></div>
+    <button class="hamburger" aria-label="메뉴 열기">☰</button>
+    <ul>
+        <li><a href="/">홈</a></li>
+        <li><a href="/blog" style="color:#ff0066; border-bottom-color:#ff0066;">블로그</a></li>
+        <li><a href="/contact">연락처</a></li>
+        <li><a href="tel:01062790862" class="tel-link">010-6279-0862</a></li>
+    </ul>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero full-bleed">
+    <div class="container">
+        <h1>서버 웜업<br>진짜 의미</h1>
+        <p class="meta">2025.03.26 &nbsp;|&nbsp; by 마포 셔츠룸 에디터 &nbsp;|&nbsp; #진짜 #스트리트브루탈리즘</p>
+    </div>
+</section>
+
+<!-- ===== ARTICLE ===== -->
+<article>
+    <div class="container content">
+        <h2>가짜 웜업은 이제 그만</h2>
+        <p>마포 셔츠룸은 <strong>‘서버 웜업’</strong>이라는 수식어를 단순한 마케팅 용어로 보지 않는다. 여긴 진짜가 통하는 곳이다. 너네가 아는 그 웜업은 잊어라. 가식적인 조명, 뻔한 멘트, 10분 만에 끝나는 구색 맞추기? 그건 웜업이 아니고 시늉일 뿐이다.</p>
+
+        <blockquote>
+            진짜 웜업은 몸과 마음이 동시에 깨어나는 것. 우리는 그걸 셔츠 한 장 벗는 순간부터 시작한다.
+        </blockquote>
+
+        <p>스트리트 브루탈리즘의 미학은 <em>있는 그대로의 날것</em>을 드러내는 데 있다. 마포 셔츠룸은 그 철학을 공간과 서비스에 그대로 적용했다. 반짝이는 인테리어보다는 콘크리트 벽면, 부드러운 멘트보다는 직설적인 소통. 고객은 여기서 거짓된 환상이 아닌 진짜 에너지를 얻는다.</p>
+
+        <div class="highlight-box">
+            <h3>왜 ‘진짜’여야 하는가?</h3>
+            <p>요즘 '서버 웜업'을 표방하는 곳이 늘었지만, 대부분은 화려한 포장에 불과하다. 고객이 진짜 원하는 건 스크립트 너머의 인간적인 연결, 그리고 거침없는 자신감이다. 마포 셔츠룸은 그걸 알고 있다. 우리는 10초 만에 가식과 진짜를 구분한다.</p>
+            <p>“가격이 비싸다”고? 가짜를 싸게 사느니, 진짜를 제값 주고 사는 게 이치다. 결과는 증명한다. <strong>010-6279-0862</strong>로 전화해 봐. 목소리만 들어도 안다.</p>
+        </div>
+
+        <h2>스트리트 브루탈리즘의 실천</h2>
+        <p>이쪽 업계에서 ‘친절함’이 미덕으로 통한다면, 우리는 ‘솔직함’을 미덕으로 삼는다. 직원들이 외우는 스크립트는 없다. 대신 각자의 개성과 스타일로 손님을 맞는다. 어떤 이는 날카로운 유머로, 어떤 이는 묵직한 존재감으로. 그게 바로 <strong>마포식 웜업</strong>이다.</p>
+
+        <p>당신이 이 글을 읽고 있다면 이미 진짜를 찾고 있는 것이다. 망설일 이유가 없다. 마포 셔츠룸의 문을 열면, 일상의 긴장이 풀리고 다른 종류의 전율이 시작된다. 가짜 웜업에 지친 당신, 여기 답이 있다.</p>
+
+        <p style="margin-top:3rem; font-weight:700; color:#ff0066;">진짜를 원한다면 지금 전화하라. 010-6279-0862. 나머진 그때 알려준다.</p>
+    </div>
+</article>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="container">
+        <p>마포 셔츠룸 | 스트리트 브루탈리즘의 정수</p>
+        <p>서울 마포구 · 010-6279-0862</p>
+        <a href="tel:01062790862" class="tel-link">010-6279-0862</a>
+        <p style="margin-top:2rem; font-size:0.75rem; color:#444;">© 2025 마포 셔츠룸. All rights reserved. 진짜만 남는다.</p>
+    </div>
+</footer>
+
+<script>
+    // Hamburger menu toggle
+    document.querySelector('.hamburger')?.addEventListener('click', function() {
+        document.querySelector('nav ul').classList.toggle('active');
+    });
+</script>
+</body>
+</html>
