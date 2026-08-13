@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · sf-t3-1779642675702-124</title>
+  <meta name="description" content="sf-t3-1779642675702-124에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://sf-t3-1779642675702-124.maphoshirts.com/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* ===== RESET & BASE ===== */
+ *,
+ *::before,
+ *::after {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+ html {
+ scroll-behavior: smooth;
+ font-size: 16px;
+ }
+ body {
+ background-color: #000000;
+ color: #ffffff;
+ font-family: 'Impact', 'system-ui', 'Arial Black', sans-serif;
+ line-height: 1.2;
+ min-height: 100vh;
+ padding: 0;
+ margin: 0;
+ overflow-x: hidden;
+ }
+
+ /* ===== STREET BRUTALIST CORE ===== */
+ h1, h2, h3, h4 {
+ font-family: 'Impact', 'system-ui', 'Arial Black', sans-serif;
+ text-transform: uppercase;
+ letter-spacing: -0.02em;
+ font-weight: 900;
+ }
+ h1 {
+ font-size: clamp(4rem, 12vw, 8rem);
+ line-height: 0.85;
+ margin-bottom: 0.5rem;
+ color: #ffffff;
+ text-shadow: 6px 6px 0 #ff3b00;
+ }
+ h2 {
+ font-size: clamp(2.8rem, 6vw, 5rem);
+ border-left: 6px solid #ff3b00;
+ padding-left: 0.4em;
+ margin-bottom: 2rem;
+ transform: skew(-4deg);
+ }
+ h3 {
+ font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+ letter-spacing: -0.03em;
+ }
+ p, li, blockquote {
+ font-family: 'system-ui', 'Segoe UI', sans-serif;
+ font-weight: 300;
+ font-size: 1.2rem;
+ line-height: 1.5;
+ letter-spacing: 0.02em;
+ }
+ a {
+ color: #ff3b00;
+ text-decoration: none;
+ border-bottom: 3px solid #ff3b00;
+ transition: all 0.2s ease;
+ }
+ a:hover {
+ background: #ff3b00;
+ color: #000000;
+ border-bottom-color: #ffffff;
+ }
+
+ /* ===== LAYOUT: full bleed + asymmetric ===== */
+ .container {
+ max-width: 100%;
+ padding: 72px 72px 0 72px;
+ margin: 0 auto;
+ }
+ section {
+ padding: 72px 0;
+ margin-bottom: 120px;
+ position: relative;
+ }
+ .section-gap {
+ margin-bottom: 120px;
+ }
+
+ /* ===== BORDERS & TEXTURES ===== */
+ .brutal-border {
+ border: 4px solid #ffffff;
+ padding: 24px;
+ box-shadow: 8px 8px 0 #ff3b00;
+ }
+ .brutal-border-thin {
+ border: 3px solid #ff3b00;
+ padding: 16px;
+ }
+ .skew-block {
+ transform: skew(-2deg);
+ background: #1a1a1a;
+ border-left: 6px solid #ff3b00;
+ padding: 32px 48px;
+ margin: 48px -72px;
+ width: calc(100% + 144px);
+ }
+ .skew-block > * {
+ transform: skew(2deg);
+ }
+ .bg-texture {
+ background-image: repeating-linear-gradient(45deg, #1a1a1a 0px, #1a1a1a 4px, #252525 4px, #252525 8px);
+ }
+ .accent-bg {
+ background-color: #ff3b00;
+ color: #000000;
+ }
+
+ /* ===== HEADER / NAV ===== */
+ header {
+ padding: 24px 72px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ border-bottom: 4px solid #ff3b00;
+ position: relative;
+ z-index: 100;
+ background: #000000;
+ }
+ .logo {
+ font-size: 2.4rem;
+ font-weight: 900;
+ color: #ffffff;
+ text-shadow: 3px 3px 0 #ff3b00;
+ letter-spacing: -0.04em;
+ line-height: 1;
+ }
+ .logo span {
+ color: #ff3b00;
+ }
+ nav {
+ display: flex;
+ gap: 24px;
+ align-items: center;
+ }
+ nav a {
+ font-size: 1.2rem;
+ padding: 8px 12px;
+ border: 3px solid transparent;
+ color: #ffffff;
+ text-transform: uppercase;
+ letter-spacing: 0.08em;
+ transition: 0.2s;
+ border-bottom: 3px solid #ffffff;
+ }
+ nav a:hover {
+ border-color: #ff3b00;
+ background: #ff3b00;
+ color: #000;
+ }
+ .hamburger {
+ display: none;
+ flex-direction: column;
+ gap: 6px;
+ cursor: pointer;
+ background: none;
+ border: none;
+ padding: 8px;
+ }
+ .hamburger span {
+ display: block;
+ width: 36px;
+ height: 4px;
+ background: #ff3b00;
+ border-radius: 0;
+ }
+ #nav-toggle {
+ display: none;
+ }
+
+ /* ===== HERO ===== */
+ .hero {
+ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
+ gap: 48px;
+ position: relative;
+ margin-bottom: 120px;
+ }
+ .hero-text {
+ flex: 1 1 400px;
+ position: relative;
+ z-index: 2;
+ }
+ .hero-visual {
+ flex: 1 1 400px;
+ min-height: 400px;
+ background: radial-gradient(circle at 30% 40%, #ff3b00 0%, #000000 70%);
+ border: 6px solid #ffffff;
+ box-shadow: -16px 16px 0 #ff3b00;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 8rem;
+ color: #ffffff;
+ text-shadow: 6px 6px 0 #000;
+ transform: rotate(2deg) skew(-2deg);
+ position: relative;
+ overflow: hidden;
+ }
+ .hero-visual::after {
+ content: "👕🔥";
+ font-size: 10rem;
+ opacity: 0.9;
+ transform: rotate(-8deg);
+ }
+ .hero-cta {
+ display: inline-block;
+ margin-top: 32px;
+ font-size: 2rem;
+ padding: 16px 48px;
+ background: #ff3b00;
+ color: #000000;
+ border: 4px solid #ffffff;
+ box-shadow: 8px 8px 0 #ffffff;
+ text-transform: uppercase;
+ letter-spacing: 0.15em;
+ transition: 0.15s;
+ font-family: 'Impact', sans-serif;
+ transform: rotate(-1deg);
+ }
+ .hero-cta:hover {
+ box-shadow: 12px 12px 0 #ffffff;
+ transform: rotate(1deg) scale(1.02);
+ background: #ffffff;
+ color: #000;
+ border-color: #ff3b00;
+ }
+
+ /* ===== REVIEW CARDS ===== */
+ .review-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 48px;
+ margin-top: 48px;
+ }
+ .review-card {
+ background: #111111;
+ border: 4px solid #ffffff;
+ padding: 32px 24px;
+ transform: rotate(var(--rot, 0deg));
+ box-shadow: 8px 8px 0 #ff3b00;
+ transition: 0.2s;
+ }
+ .review-card:nth-child(odd) {
+ --rot: -1deg;
+ }
+ .review-card:nth-child(even) {
+ --rot: 1.5deg;
+ }
+ .review-card:hover {
+ transform: rotate(0deg) scale(1.02);
+ box-shadow: 12px 12px 0 #ff3b00;
+ }
+ .review-card .stars {
+ color: #ff3b00;
+ font-size: 1.8rem;
+ letter-spacing: 0.2em;
+ display: block;
+ margin-bottom: 12px;
+ }
+ .review-card blockquote {
+ font-size: 1.1rem;
+ font-style: normal;
+ border-left: 4px solid #ff3b00;
+ padding-left: 16px;
+ margin: 16px 0;
+ }
+ .review-card .meta {
+ display: flex;
+ justify-content: space-between;
+ font-size: 0.9rem;
+ color: #aaaaaa;
+ border-top: 2px solid #333;
+ padding-top: 12px;
+ margin-top: 16px;
+ text-transform: uppercase;
+ }
+
+ /* ===== FEATURES / INFO ===== */
+ .feature-list {
+ list-style: none;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+ gap: 32px;
+ }
+ .feature-list li {
+ background: #0f0f0f;
+ border: 3px solid #ffffff;
+ padding: 24px 20px;
+ font-size: 1.3rem;
+ font-weight: 700;
+ display: flex;
+ align-items: center;
+ gap: 16px;
+ box-shadow: 4px 4px 0 #ff3b00;
+ transform: skew(-1deg);
+ }
+ .feature-list li span {
+ font-size: 2.2rem;
+ }
+
+ /* ===== FOOTER ===== */
+ footer {
+ border-top: 6px solid #ff3b00;
+ padding: 48px 72px;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ align-items: center;
+ gap: 24px;
+ background: #0a0a0a;
+ margin-top: 72px;
+ }
+ footer .copy {
+ font-size: 0.9rem;
+ color: #888;
+ text-transform: uppercase;
+ letter-spacing: 0.1em;
+ }
+ footer .phone {
+ font-size: 2rem;
+ color: #ff3b00;
+ border: none;
+ background: transparent;
+ padding: 8px 24px;
+ border: 3px solid #ff3b00;
+ transition: 0.2s;
+ }
+ footer .phone:hover {
+ background: #ff3b00;
+ color: #000;
+ border-color: #fff;
+ }
+
+ /* ===== RESPONSIVE ===== */
+ @media (max-width: 768px) {
+ .container {
+ padding: 36px 24px 0 24px;
+ }
+ section {
+ padding: 48px 0;
+ margin-bottom: 80px;
+ }
+ header {
+ padding: 16px 24px;
+ flex-wrap: wrap;
+ }
+ nav {
+ display: none;
+ width: 100%;
+ flex-direction: column;
+ gap: 12px;
+ padding: 24px 0 12px 0;
+ border-top: 4px solid #ff3b00;
+ margin-top: 12px;
+ }
+ nav a {
+ width: 100%;
+ text-align: center;
+ border-bottom: 2px solid #333;
+ padding: 12px;
+ font-size: 1.4rem;
+ }
+ #nav-toggle:checked ~ nav {
+ display: flex;
+ }
+ .hamburger {
+ display: flex;
+ }
+ h1 {
+ font-size: clamp(3rem, 10vw, 5rem);
+ text-shadow: 4px 4px 0 #ff3b00;
+ }
+ h2 {
+ font-size: 2.2rem;
+ border-left-width: 4px;
+ transform: skew(0);
+ }
+ .hero {
+ gap: 32px;
+ }
+ .hero-visual {
+ min-height: 250px;
+ font-size: 4rem;
+ }
+ .hero-visual::after {
+ font-size: 5rem;
+ }
+ .hero-cta {
+ font-size: 1.4rem;
+ padding: 14px 32px;
+ }
+ .skew-block {
+ margin: 32px -24px;
+ width: calc(100% + 48px);
+ padding: 24px 20px;
+ }
+ .review-grid {
+ gap: 32px;
+ }
+ .feature-list li {
+ font-size: 1rem;
+ padding: 16px;
+ }
+ footer {
+ padding: 32px 24px;
+ flex-direction: column;
+ text-align: center;
+ }
+ footer .phone {
+ font-size: 1.6rem;
+ width: 100%;
+ }
+ }
+
+ /* 추가 작은 장치 */
+ @media (max-width: 420px) {
+ .container {
+ padding: 24px 16px 0 16px;
+ }
+ h1 {
+ font-size: 2.8rem;
+ }
+ .hero-visual {
+ min-height: 180px;
+ }
+ .hero-visual::after {
+ font-size: 3.5rem;
+ }
+ .logo {
+ font-size: 1.8rem;
+ }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (1/2) · sf-t3-1779642675702-124">
+  <meta property="og:description" content="sf-t3-1779642675702-124에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://sf-t3-1779642675702-124.maphoshirts.com/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="logo">마포<span>🔥</span>셔츠룸</div>
+ <input type="checkbox" id="nav-toggle" hidden>
+ <label for="nav-toggle" class="hamburger" aria-label="메뉴 열기">
+ 
+ </label>
+ <nav>
+ <a href="#about">소개</a>
+ <a href="#reviews">리뷰</a>
+ <a href="#info">정보</a>
+ 
+ </nav>
+</header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 33개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/checklist-002-d8y8ti.html">마포 셔츠룸 선택 전에 확인할 체크리스트와 실패 사례</a>
+        <p class="post-item__summary">마포 셔츠룸을 이용하기로 마음먹었다면 방문 전 몇 가지 핵심 사항을 꼼꼼하게 살피는 것이 중요합니다. 단순히 위치가 가깝다는 이유만으로 선택하기보다는 해당 업소가 정식으로 운영되고 있는지, 내부 시</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/compare-001-d8y8ti.html">마포 셔츠룸</a>
+        <p class="post-item__summary">마포 지역에서 최근 주목받는 유흥 문화인 마포 셔츠룸은 직장인들의 스트레스 해소와 친목 도모를 위한 공간으로 운영됩니다. 이곳은 기존의 정형화된 유흥 방식에서 벗어나 보다 자유롭고 편안한 분위기를 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0358.html">마포 셔츠룸, 최신 서버 웜업 솔루션과 함께</a>
+        <p class="post-item__summary">마포 셔츠룸은 마포구에서 운영 중이며, IT 인프라를 위한 서버 웜업 전문 기업이다. 24시간 모니터링과 자동화 스크립트로 안정적인 서비스를 제공한다. 혁신적인 접근 방식을 통해 고객의 다운타임을 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0359.html">마포 셔츠룸에서 경험하는 서버 웜업의 진가</a>
+        <p class="post-item__summary">마포에서 셔츠룸을 찾는 이들이 가장 먼저 알아두면 좋은 것이 서버 웜업이다. 일반적인 주류 중심의 유흥과 달리 셔츠룸은 도착 후 초기 분위기 조성이 전체 만족도를 결정한다. 서버 웜업은 게스트가 긴</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0360.html">마포 셔츠룸이 제공하는 워밍업 서버 서비스</a>
+        <p class="post-item__summary">마포 셔츠룸은 워밍업 서버가 필요한 기업과 개발자에게 맞춤형 서비스를 제공한다. 화기로 빠른 접속 시간을 보장하면서도 비용 효율을 높여준다. 특히 집중적인 개발 환경이 필요한 스타트업에게 인기가 많</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0361.html">마포 셔츠룸 이용 전 알아두면 좋은 기본 개념</a>
+        <p class="post-item__summary">마포 지역에는 다양한 형태의 셔츠룸이 운영되고 있으며, 최근 방문객들의 관심이 꾸준히 이어지고 있다. 일반 유흥 업소와 달리 셔츠룸은 서버 웜업이라는 독특한 시스템을 기반으로 운영되는 경우가 많아 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0362.html">마포 셔츠룸에서 즐기는 세련된 밤, 그 시작</a>
+        <p class="post-item__summary">마포 셔츠룸은 도심 한가운데에 자리 잡고 있어 빛나는 도시 스카이라인과 조우한다. 고급스러운 샤프한 인테리어와 부드러운 조명은 사람들의 하루를 환상적인 휴식지로 바꾼다. 이곳은 고요함과 열정이 공존</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0363.html">마포 셔츠룸 방문 전 생각해볼 점들</a>
+        <p class="post-item__summary">마포 지역은 홍대입구와 합정·상수 일대를 중심으로 셔츠룸 업소가 고르게 분포되어 있다. 강남권에 비해 상대적으로 진입 장벽이 낮다는 인식이 있어 첫 방문을 앞둔 이들에게 자주 언급되는 곳이기도 하다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0364.html">마포 셔츠룸, 패션과 디지털 마케팅의 만남</a>
+        <p class="post-item__summary">마포 셔츠룸은 마포 지역의 핫한 패션 공간이다. 지하철 역 근처에 위치해 접근성이 좋아 쇼핑 멤버들이 자주 찾는다. 매일 선보이는 독창적인 디자인이 큰 호응을 얻고 있다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0365.html">마포 셔츠룸 초행길을 위한 서버 웜업 가이드</a>
+        <p class="post-item__summary">마포 지역 셔츠룸은 독특한 서버 웜업 시스템으로 입소문이 나고 있다. 방문객이라면 누구나 처음 경험하는 절차와 분위기에 궁금증을 갖기 마련이다. 실제로 어떤 과정으로 진행되는지 미리 알아두면 훨씬 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0366.html">마포에서 즐기는 스타일 완성, 마포 셔츠룸</a>
+        <p class="post-item__summary">마포에서 편안하게 스타일을 완성할 수 있는 마포 셔츠룸은, 일상에 빛을 더해 주는 필수 코디 장소입니다. 다양한 사이즈와 색상으로 고객 맞춤 서비스를 제공하며, 혼란 없는 선택을 돕습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0367.html">마포 셔츠룸에서 만나는 서버 웜업의 실제</a>
+        <p class="post-item__summary">마포 지역에서 셔츠룸을 운영하거나 이용하려는 움직임이 점차 늘어나고 있다. 서버 웜업이라는 콘셉트는 고객이 도착하기 전부터 준비 과정을 체계화한다는 점에서 기존의 단순한 공간 대여 방식과 차별화된다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0368.html">마포 셔츠룸, 서버 웜업의 새로운 중심지</a>
+        <p class="post-item__summary">마포에 위치한 마포 셔츠룸은 기존의 상업 공간을 재해석해, 바쁜 직장인과 소규모 창업가들이 짧은 시간에 집중할 수 있는 서버 웜업 공간을 제공합니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0369.html">마포 셔츠룸에서 즐기는 확실한 서버 웜업 팁</a>
+        <p class="post-item__summary">마포는 서울에서도 유흥 문화가 활발한 지역으로 손꼽힌다. 특히 셔츠룸은 전문적인 서비스와 세련된 공간으로 많은 이들의 관심을 받고 있다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0370.html">마포 셔츠룸에서 찾는 스타일 완성</a>
+        <p class="post-item__summary">사람들이 트렌디한 패션을 찾는 곳, 마포 셔츠룸이 주목받고 있습니다. 이곳은 예쁜 제작 수선이 가능한 공간이죠. 특히 마포 지역 주민들에게 편리한 위치를 자랑합니다. 마음이 편안해지는 분위기에서 스</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0371.html">마포 셔츠룸의 매력, 서버 웜업 시스템에서 나온다</a>
+        <p class="post-item__summary">마포는 회식과 모임이 끊이지 않는 지역이라 다양한 업소들이 자리를 잡고 있다. 최근 들어 마포 셔츠룸을 찾는 사람들이 늘어나면서 이에 대한 관심도 함께 높아지고 있다. 기존과는 다른 색다른 분위기를</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0372.html">마포 셔츠룸: 일상에서 편의와 효율을 돋보이게 하는 공간</a>
+        <p class="post-item__summary">마포 셔츠룸은 마포 지역의 일상 편의시설을 아선하다. 매일 아침 손님이 찾아오며, 꼼꼼히 정리되는 네임이 스트리트 패션의 새로운 터치로 이어진다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0373.html">마포 셔츠룸에서 분위기와 서비스가 중요한 이유</a>
+        <p class="post-item__summary">마포 지역은 홍대입구와 합정역 일대를 중심으로 다양한 콘셉트의 셔츠룸이 밀집해 있는 대표적인 상권이다. 각 업소마다 인테리어 스타일과 운영 방향이 확연히 다르기 때문에, 방문 전에 자신의 취향과 목</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-0374.html">마포 셔츠룸, 빠른 패션과 서버 웜업이 만나는 공간</a>
+        <p class="post-item__summary">마포 셔츠룸은 서울 마포구에 위치한 패션 공간으로, 남성 액세서리와 액티브 웨어를 중심으로 다양한 스타일을 선보입니다. 친환경 소재와 혁신적인 디자인이 조화를 이루어 고객들의 관심을 끌고 있습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-1379.html">마포 셔츠룸 서버 웜업, 결국 룸 운영의 숨은 엔진</a>
+        <p class="post-item__summary">셔츠룸이라는 업종은 손님을 맞는 시간이 곧 매출이라는 속성상, 서버가 느려지면 그날 그 테이블 전체가 영향받는다. 그래서 웜업이라는 행위가 단순한 서버 관리 용어를 넘어 사업 운영의 일부가 된다. </p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
